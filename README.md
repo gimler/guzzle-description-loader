@@ -22,10 +22,44 @@ composer require "gimler/guzzle-description-loader"
 ## Usage
 
 ``` php
-$configDirectories = array(FIXTURES_PATH);
+use Guzzle\Service\Loader\JsonLoader;
+use GuzzleHttp\Command\Guzzle\Description;
+use Symfony\Component\Config\FileLocator;
+
+$configDirectories = array(DESCRIPTION_PATH);
 $this->locator = new FileLocator($configDirectories);
 
 $this->jsonLoader = new JsonLoader($this->locator);
 
 $description = $this->jsonLoader->load($this->locator->locate('description.json'));
+$description = new Description($description);
+```
+
+## Sample
+
+``` json
+{
+  "operations": {
+    "certificates.list": {
+      "httpMethod": "GET",
+      "uri": "certificates",
+      "description": "Lists and returns basic information about all of the management certificates associated with the specified subscription.",
+      "responseModel": "CertificateList"
+    }
+  },
+  "models": {
+    "CertificateList": {
+      "type": "array",
+      "name": "certificates",
+      "sentAs": "SubscriptionCertificate",
+      "location": "xml",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "imports": [
+    "description_import.json"
+  ]
+}
 ```
