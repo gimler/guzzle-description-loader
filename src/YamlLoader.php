@@ -38,9 +38,9 @@ class YamlLoader extends FileLoader
 
     public function supports($resource, $type = null)
     {
-        return is_string($resource) && 'yml' === pathinfo(
+        return is_string($resource) && in_array(pathinfo(
             $resource,
             PATHINFO_EXTENSION
-        );
+        ), ['yaml', 'yml'], true);
     }
 }
