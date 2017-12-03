@@ -1,2 +1,2 @@
-operations
-    certificates.add:
+operations:
+-certificates.add
