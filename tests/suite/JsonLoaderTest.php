@@ -6,7 +6,7 @@ use Guzzle\Service\Loader\JsonLoader;
 
 use Symfony\Component\Config\FileLocator;
 
-class JsonLoaderTest extends \PHPUnit_Framework_TestCase
+class JsonLoaderTest extends \PHPUnit\Framework\TestCase
 {
     protected $jsonLoader;
 

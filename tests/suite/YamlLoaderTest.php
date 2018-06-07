@@ -6,7 +6,7 @@ use Guzzle\Service\Loader\YamlLoader;
 
 use Symfony\Component\Config\FileLocator;
 
-class YamlLoaderTest extends \PHPUnit_Framework_TestCase
+class YamlLoaderTest extends \PHPUnit\Framework\TestCase
 {
     protected $YamlLoader;
 

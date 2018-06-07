@@ -6,7 +6,7 @@ use Guzzle\Service\Loader\PhpLoader;
 
 use Symfony\Component\Config\FileLocator;
 
-class PhpLoaderTest extends \PHPUnit_Framework_TestCase
+class PhpLoaderTest extends \PHPUnit\Framework\TestCase
 {
     protected $PhpLoader;
 
