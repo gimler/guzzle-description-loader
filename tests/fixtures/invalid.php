@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'operations' =
+    'operations' =>
         array(
             'certificates.add' =>
                 array(
