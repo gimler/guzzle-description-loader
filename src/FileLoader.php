@@ -16,7 +16,7 @@ use Symfony\Component\Config\Loader\FileLoader as BaseFileLoader;
 abstract class FileLoader extends BaseFileLoader
 {
 
-    public function load($resource, $type = null)
+    public function load($resource)
     {
         if (!stream_is_local($resource)) {
             throw new \Exception(sprintf('This is not a local file "%s".', $resource));
