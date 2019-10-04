@@ -31,9 +31,8 @@ abstract class FileLoader extends BaseFileLoader
             foreach($configValues["imports"] as $file) {
                 $configValues = array_merge_recursive($configValues, $this->import($this->locator->locate($file)));
             }
+            unset($configValues["imports"]);
         }
-
-        unset($configValues["imports"]);
 
         return $configValues;
     }
